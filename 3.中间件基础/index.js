@@ -26,7 +26,6 @@ export const createStore = (reducer, preloadedState) => {
     } finally {
       isDispatching = false;
     }
-    currentState = reducer(currentState, action);
     listeners.forEach((fn) => fn());
     return currentState;
   };

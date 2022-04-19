@@ -44,7 +44,7 @@ try {
   console.error("错误信息: ", err);
 }
 
-// 实现两个功能可以重写 dispatch
+// 实现两个功能可以重写 dispatch 中间件的雏形
 const next = redux.dispatch;
 // 重写 dispatch方法
 redux.dispatch = (action) => {
